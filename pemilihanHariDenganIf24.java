@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class pemilihanHariDenganIf2 {
+public class pemilihanHariDenganIf24 {
 
     
 
@@ -23,7 +23,6 @@ public class pemilihanHariDenganIf2 {
             dayType = "weekend";
             break;
 
-        
             default:
             dayType="invalid number ";
                 break;
