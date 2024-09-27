@@ -6,7 +6,7 @@ public class kafe24 {
         String menu;
         char ukuranCup;
         int jumlah;
-        boolean keanggotaan;
+        boolean keanggotaan,cup = true;
          System.out.print("Masukkan Menu :  ");
          menu = sc.nextLine();
          System.out.print("Masukkan ukuran cup : ");
@@ -30,8 +30,6 @@ public class kafe24 {
             hargamenu = 20000;
                 
                 break;
-          
-            
           }
           double totalHarga = hargamenu *jumlah;
 
@@ -47,13 +45,20 @@ public class kafe24 {
                 break;
           
             default:
+                cup= false;
                 break;
           }
-          double diskon = keanggotaan ? 0.1 : 0;
-          double nominalbayar = totalHarga - (diskon *totalHarga);
-          
-
-          System.out.println("item pembelian: " + jumlah + " " + menu + " dengan ukuran cup " + ukuranCup);
-          System.out.println("Nominal bayar: " + nominalbayar);
+          if (cup) {
+            
+              double diskon = keanggotaan ? 0.1 : 0;
+              double nominalbayar = totalHarga - (diskon *totalHarga);
+              
+    
+              System.out.println("item pembelian: " + jumlah + " " + menu + " dengan ukuran cup " + ukuranCup);
+              System.out.println("Nominal bayar: " + nominalbayar);
+          } else {
+            System.out.println("ukuran tidak tersedia");
+            
+          }
     }
 }
