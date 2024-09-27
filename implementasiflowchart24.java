@@ -23,7 +23,7 @@ public class implementasiflowchart24 {
             kategori = "Lansia";
         }
         else {
-            kategori = "input tidak valid";
+            kategori = "INVALID";
         }
         
         System.out.println("Usia Anda temasuk kategori: " + kategori);
